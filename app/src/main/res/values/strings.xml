@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StreetReport</string>
+    <string name="kakao_app_key">2fc5536ab99aa531bdcfee5694d60df6</string>
+    <string name="menu_share_complete">공유하기</string>
+    <string name="share_content_hint">내용 입력...</string>
+    <string name="add_location">위치 추가</string>
+    <string name="reportType">유형분류</string>
+    <string name="report_type1">무단횡단 지역</string>
+    <string name="report_type2">스쿨존 지역</string>
+    <string name="report_type3">노인 위험 지역</string>
+    <string name="report_type4">아이 위험 지역</string>
+    <string name="report_type5">기타</string>
+
+
+    <!--navbar string -->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

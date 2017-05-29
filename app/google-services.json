@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "147178818393",
+    "firebase_url": "https://streetreport-6a77c.firebaseio.com",
+    "project_id": "streetreport-6a77c",
+    "storage_bucket": "streetreport-6a77c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147178818393:android:18219a83dd3655e3",
+        "android_client_info": {
+          "package_name": "com.example.streetreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147178818393-ctjsa29300k7nic3k6d7e0bmik8vatvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv3bJI2XqCbRn1Rg1OH0VdKpPIk6_AakA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
