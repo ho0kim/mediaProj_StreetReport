@@ -41,14 +41,14 @@ public class MainActivity extends Activity {
                 case R.id.navigation_home:
                     return true;
 
-                case R.id.navigation_dashboard:
+                case R.id.navigation_share:
                     final Intent intent = new Intent(getApplicationContext(), ShareActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     finish();
                     return true;
 
-                case R.id.navigation_notifications:
+                case R.id.navigation_profile:
                     return true;
             }
             return false;
