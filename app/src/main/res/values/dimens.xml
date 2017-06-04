@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginStart">20dp</dimen>
+    <dimen name="marginEnd">20dp</dimen>
+    <dimen name="marginTop">20dp</dimen>
+    <dimen name="marginTop_big">50dp</dimen>
+    <dimen name="marginBottom">20dp</dimen>
+    <dimen name="TextSize">15sp</dimen>
+    <dimen name="imgBtnPadding">10dp</dimen>
+
+
+
+</resources>
