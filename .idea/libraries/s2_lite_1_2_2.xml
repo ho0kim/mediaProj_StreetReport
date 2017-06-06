@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="s2-lite-1.2.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/39cd75bf9ce8e491e1614ee161430eff326b9159/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/39cd75bf9ce8e491e1614ee161430eff326b9159/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/458c037e37e1d4e6095a143ed741d0f8d00137e8/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/458c037e37e1d4e6095a143ed741d0f8d00137e8/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

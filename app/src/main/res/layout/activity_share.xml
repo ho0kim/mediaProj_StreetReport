@@ -113,18 +113,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:drawableLeft="@drawable/trafficlight"
+                android:drawableLeft="@drawable/trafficlight_button_change"
                 android:maxHeight="30dp"
-                android:text="@string/jaywalking" />
+                android:text="@string/jaywalking"
+                android:tag ="1"/>
 
             <Button
                 android:id="@+id/type2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:drawableLeft="@drawable/schoolzone"
+                android:drawableLeft="@drawable/schoolzone_button_change"
                 android:maxHeight="30dp"
-                android:text="@string/schoolzone" />
+                android:text="@string/schoolzone"
+                android:tag ="2"/>
         </TableRow>
 
         <TableRow>
@@ -135,11 +137,12 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@android:color/white"
-                android:drawableLeft="@drawable/elder"
+                android:drawableLeft="@drawable/elder_button_change"
                 android:maxHeight="30dp"
                 android:padding="@dimen/imgBtnPadding"
                 android:scaleType="centerCrop"
-                android:text="@string/elder" />
+                android:text="@string/elder"
+                android:tag ="3"/>
 
             <Button
                 android:id="@+id/type4"
@@ -147,11 +150,12 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@android:color/white"
-                android:drawableLeft="@drawable/child"
+                android:drawableLeft="@drawable/child_button_change"
                 android:maxHeight="30dp"
                 android:padding="@dimen/imgBtnPadding"
                 android:scaleType="centerCrop"
-                android:text="@string/child" />
+                android:text="@string/child"
+                android:tag ="4"/>
         </TableRow>
 
         <TableRow>
@@ -162,11 +166,12 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@android:color/white"
-                android:drawableLeft="@drawable/etc"
+                android:drawableLeft="@drawable/etc_button_change"
                 android:maxHeight="30dp"
                 android:padding="@dimen/imgBtnPadding"
                 android:scaleType="centerCrop"
-                android:text="@string/etc" />
+                android:text="@string/etc"
+                android:tag ="5"/>
 
         </TableRow>
 

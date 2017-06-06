@@ -17,6 +17,7 @@ public class KakaoSignupActivity extends Activity {
      * Main으로 넘길지 가입 페이지를 그릴지 판단하기 위해 me를 호출한다.
      * @param savedInstanceState 기존 session 정보가 저장된 객체
      */
+    public static UserProfile userprofile;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -49,9 +50,10 @@ public class KakaoSignupActivity extends Activity {
             public void onNotSignedUp() {} // 카카오톡 회원이 아닐 시 showSignup(); 호출해야함
 
             @Override
-            public void onSuccess(UserProfile userProfile) {  //성공 시 userProfile 형태로 반환
-                Logger.d("UserProfile : " + userProfile);
-                Toast.makeText(KakaoSignupActivity.this,"사용자 이름은 "+userProfile.getNickname(),Toast.LENGTH_SHORT).show();
+            public void onSuccess(UserProfile u) {  //성공 시 userProfile 형태로 반환
+                Logger.d("UserProfile : " + u);
+                Toast.makeText(KakaoSignupActivity.this,"사용자 이름은 "+u.getNickname(),Toast.LENGTH_SHORT).show();
+                userprofile= u;
                 redirectMainActivity(); // 로그인 성공시 MainActivity로
             }
         });

@@ -3,138 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\eacc89cbd8e445fb13c408e762604ce492bb7eeb\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_b68cf0dec3bc57a76207bb7ad74bcb79f1b63ce5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.2.22\40fe82092e0ae3ca549b132a1e7e876807525176\aws-android-sdk-s3-2.2.22.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="40fe82092e0ae3ca549b132a1e7e876807525176">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\aws-android-sdk-s3-2.2.22_495f2c14e9df7469f5239af5c750c69a10d6fc65.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\f8d991d6f9411c3fde3b7eb6a6a683fc04cacedd\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_b759fac6735eabbf3bafc81bbdb902af04029d51.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\b8731074b39464a5baa58f15df4e9c399600e515\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_869642fb9e5ac58539e9528a660a0406eff0c25a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\5b283c640b6c93fdc6920c24324d8f5c55a83780\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_a7ea59598d4397a9530748c99e604a90112f9c7a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\8d3dd16e83b6941a2391efdd5f952ba89830463d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_60da7ff0c43b007c3085ce81192a1c3c9ccbee0f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\cb6e9794788c6c078ca864700f008567fbd76a85\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_fd07ed01802fc531e5247dd36189c0f36b53dda8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\efa7796b58fec8789b4515b78f652ca7a172f6b1\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_ed622fe7bd99167bbf6641a97e52f89fa779884e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\ca84a1fa2214faf2d7b4209fcb87ca2502a2fdfc\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_2193f23843783ae4981b66961e275d9cde37e415.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.2.22\a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549\aws-android-sdk-ddb-2.2.22.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-2.2.22_598d158fa5fae6f1cb9df6b58dee53bdf0a3b4ce.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.2.22\c6789de00db9d1f93faec881fa0c1f5960fb8a15\aws-android-sdk-core-2.2.22.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c6789de00db9d1f93faec881fa0c1f5960fb8a15">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\aws-android-sdk-core-2.2.22_3d9f33fa71dc0fb58d012f355e5d5e28cb292131.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Android\Project\client\app\libs\libDaumMapAndroid.jar"
+        jar="E:\AndroidStudioProjects\mediaFinal\app\libs\libDaumMapAndroid.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="b365841bba8bc2d592e4b22008885a6f0cd1c77d">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\libDaumMapAndroid_24250a2439948fffc66bf3833142f9bf1e044d23.jar" />
+        <dex dex="E:\AndroidStudioProjects\mediaFinal\app\build\intermediates\pre-dexed\debug\libDaumMapAndroid_4bc708da8088761238642ac49234ba266b14fed8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\a317b94ebfcf7bc837c3f5b938952536c3a5354b\output\jars\classes.jar"
+        jar="C:\Users\hoyoung\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.6\b036abbb61656165da99cf44898e4b9123687e65\MPAndroidChart-v2.1.6.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_88ffc99e3452b7c1c06d4a26b650d477ec390578.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\차은별\.android\build-cache\26428eeca60eebd3c590fcbb2d769ac4ae295326\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\classes_8b2437be55d1db66b49db5b94226372755c5926b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="C:\Android\Project\client\app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
+        sha1="b036abbb61656165da99cf44898e4b9123687e65">
+        <dex dex="E:\AndroidStudioProjects\mediaFinal\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v2.1.6_2ba66934cdae3f5ed786429db0206a625c10d6df.jar" />
     </item>
 
 </items>

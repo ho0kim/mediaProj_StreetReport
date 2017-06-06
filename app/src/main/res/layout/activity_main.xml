@@ -13,29 +13,45 @@
         android:layout_height="match_parent"
         android:id="@+id/main_map"
         android:layout_weight="1">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/map_view"/>
+            android:id="@+id/map_view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" >
+
+            <Button
+                android:id="@+id/btn_currentDanger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 위험도"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
             android:src="@drawable/location_button"
             android:id="@+id/btn_location"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            android:background="@null"
+            android:layout_marginTop="70dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
             android:src="@drawable/menu_button"
             android:id="@+id/btn_menu"
+            android:onClick="onPopupButtonClick"
+            android:background="@null"
+            android:layout_marginStart="16dp"
             android:layout_alignBottom="@+id/btn_location"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp"
-            android:onClick="onPopupButtonClick"/>
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView

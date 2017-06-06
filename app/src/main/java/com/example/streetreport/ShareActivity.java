@@ -1,6 +1,5 @@
 package com.example.streetreport;
 
-import android.*;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,20 +9,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,8 +32,6 @@ import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
-
-import org.w3c.dom.Text;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -50,12 +45,23 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
     static final int PICK_FROM_ALBUM = 1;
     static final int CROP_FROM_IMAGE = 2;
 
-    private Uri imageUri;
-    private ImageView user_img;
-    private String absolutePath;
-    private int id_view;
+    Uri imageUri;
+    ImageView user_img;
+    EditText report_content;
+    String absolutePath;
+    int id_view;
     File copyFile;
-
+    Button type1, type2, type3, type4, type5;
+    TextView addLocation;
+    double lat;
+    double lon;
+    GpsInfo gps;
+    String image;
+    String type;
+    String nickname;
+    String content;
+    String latitude;
+    String longitude;
     CognitoCachingCredentialsProvider credentialsProvider;
     AmazonS3 s3;
     TransferUtility transferUtility;
@@ -67,12 +73,13 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
 
         //actionBar 객체를 가져옴.
         ActionBar actionBar = getSupportActionBar();
-
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
 
+
         Button btn_UploadPhoto = (Button) this.findViewById(R.id.uploadPhoto);
         user_img = (ImageView) this.findViewById(R.id.user_img);
+        report_content = (EditText) this.findViewById(R.id.report_content);
 
         btn_UploadPhoto.setOnClickListener(this);
 
@@ -89,15 +96,70 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
         // S3 버킷의 위치와 목적 설정
         s3.setRegion(Region.getRegion(Regions.AP_NORTHEAST_2));
         s3.setEndpoint("s3.ap-northeast-2.amazonaws.com");
+
+        type1 = (Button) findViewById(R.id.type1);
+        type1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type1.setSelected(!type1.isSelected());
+            }
+        });
+
+        type2 = (Button) findViewById(R.id.type2);
+        type2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type2.setSelected(!type2.isSelected());
+            }
+        });
+
+        type3 = (Button) findViewById(R.id.type3);
+        type3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type3.setSelected(!type3.isSelected());
+            }
+        });
+
+        type4 = (Button) findViewById(R.id.type4);
+        type4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type4.setSelected(!type4.isSelected());
+            }
+        });
+
+        type5 = (Button) findViewById(R.id.type5);
+        type5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type5.setSelected(!type5.isSelected());
+            }
+        });
+
+        addLocation = (TextView) findViewById(R.id.add_location);
+        addLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gps = new GpsInfo(ShareActivity.this);
+                if (gps.isGetLocation()) {
+                    lat = gps.getLatitude();
+                    lon = gps.getLongitude();
+                }
+                Log.d("lat", "" + lat);
+                Log.d("lon", "" + lon);
+            }
+        });
+
     }
 
     //카메라에서 사진 촬영
     public void doTakePhotoAction() { //카메라 촬영 후 이미지 가져오기
         int permissionCheck = ContextCompat.checkSelfPermission(ShareActivity.this, Manifest.permission.CAMERA);
-        if(permissionCheck == PackageManager.PERMISSION_DENIED) {
+        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
             //권한없음
             ActivityCompat.requestPermissions(ShareActivity.this, new String[]{Manifest.permission.CAMERA}, 0);
-        }else {
+        } else {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
             //임시로 사용할 파일 경로를 생성
@@ -108,16 +170,6 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, PICK_FROM_CAMERA);
         }
     }
-//
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permission, @NonNull int[] grantResults){
-//        if(requestCode==0){
-//
-//        }
-//    }
-//
-
-
 
     //앨범에게 이미지 가져오기
     public void doTakeAlbumAction() { //앨범에서 이미지 가져오기
@@ -214,7 +266,7 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
             new AlertDialog.Builder(this)
                     .setTitle("업로드할 이미지 선택")
                     .setPositiveButton("사진촬영", cameraListener)
-                    .setNeutralButton("앨범선택", albumListener)
+                    .setNeutralButton("앨범에서 선택", albumListener)
                     .setNegativeButton("취소", cancelLister)
                     .show();
         }
@@ -261,7 +313,16 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, "홈아이콘 클릭", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.share_complete:
+                Log.d("copyFile", copyFile.getName());
+
                 Toast.makeText(this, "공유하기 클릭", Toast.LENGTH_SHORT).show();
+
+                image = copyFile.getName();
+                type = type1.getTag().toString();
+                nickname = KakaoSignupActivity.userprofile.getNickname();
+                content = report_content.getText().toString();
+                latitude = "" + lat;
+                longitude = "" + lon;
 
                 //파일업로드
                 TransferObserver observer = transferUtility.upload(
@@ -269,8 +330,40 @@ public class ShareActivity extends AppCompatActivity implements View.OnClickList
                         copyFile.getName(),    /* 버킷에 저장할 파일의 이름 */
                         copyFile        /* 버킷에 저장할 파일  */
                 );
+                Log.d("copyFile", copyFile.getName());
+
+                String req_url = "";
+                req_url += "type=" + type;
+                req_url += "&nickname=" + nickname;
+                req_url += "&content=" + content;
+                req_url += "&latitude=" + latitude;
+                req_url += "&longitude=" + longitude;
+                req_url += "&image=" + image;
+
+                CallHttp callHttp = new CallHttp(HttpHandler.BASE_URL, req_url);
+                callHttp.start();
                 return true;
+
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public class CallHttp extends Thread {
+        private String data;
+
+        public CallHttp(String url, String data) {
+            this.data = url + data;
+        }
+
+        @Override
+        public void run() {
+            try {
+                String url = this.data;
+                String response = HttpHandler.getInstance().GET(url);
+                Log.d("HTTP", response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
