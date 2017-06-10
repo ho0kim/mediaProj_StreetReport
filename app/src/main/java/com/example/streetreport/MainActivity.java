@@ -210,8 +210,8 @@ public class MainActivity extends Activity {
         MapCircle circle = new MapCircle(
                 MapPoint.mapPointWithGeoCoord(x,y),
                 100,
-                Color.argb(128,redRgb,0,255-redRgb),
-                Color.argb(128,redRgb,0,255-redRgb)
+                Color.argb(128,redRgb,255-redRgb,0),
+                Color.argb(128,redRgb,255-redRgb,0)
         );
         return circle;
     }
